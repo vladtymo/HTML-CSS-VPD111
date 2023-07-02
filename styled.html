@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>First Page</title>
+    <style>
+        /* ------------------- CSS ------------------- */
+        /* 
+            selector {
+                property: value;
+                property: value;
+            }
+        */
+
+        /* ---------- Tag Selector */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            background-color: darkblue;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 1px 1px 8px gray;
+        }
+
+        p {
+            background-color: rgb(239, 239, 239);
+            border-radius: 6px;
+            padding: 6px;
+        }
+
+        strong {
+            text-decoration: underline;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 5px black;
+        }
+
+        mark {
+            background-color: transparent;
+            color: blueviolet;
+            font-family: cursive;
+            font-size: larger;
+        }
+
+        kbd {
+            background-color: black;
+            padding: 6px;
+            color: white;
+            border-radius: 4px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        /* ---------- Class Selector */
+        .important {
+            background-color: darksalmon;
+            border-radius: 4px;
+            padding: 4px;
+        }
+
+        .bordered {
+            border: 1px solid gray;
+            padding: 2px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Introduction to <span class="bordered">CSS</span></h1>
+
+    <!-- inline styles: <tag style="prop: value;"> -->
+    <h4 style="color: purple; font-size: 16px; text-transform: uppercase;">The language we use to style an HTML
+        document. CSS describes how HTML elements should be displayed.</h4>
+
+    <p>This is the first paragraph!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, illum corrupti iste rerum nulla deserunt,
+        porro saepe asperiores blanditiis <span class="bordered">dolor perspiciatis</span> maxime nisi placeat
+        temporibus unde sed.
+        Impedit,
+        recusandae facilis?</p>
+    <p class="important">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, nesciunt!</p>
+
+    <article>
+        <p><span class="bordered">Lorem ipsum</span> dolor sit amet.</p>
+        <p>A, veritatis iste? Deleniti, consequuntur!</p>
+        <p>Dicta, voluptas fugit. Recusandae, iure!</p>
+    </article>
+    <hr>
+
+    <h2>Logical vs Phisical tags</h2>
+    <p>The <strong class="important bordered">HyperText Markup Language</strong> or HTML is the standard <em>markup
+            language</em>
+        for documents
+        designed to
+        be displayed in a
+        web browser.</p>
+
+    <p>You should use <ins>abbr</ins> tag for the abbreviations instead of <del>acronym</del>!</p>
+    <p><abbr title="Cascading Style Sheets">CSS</abbr> is a style sheet language used for describing the presentation of
+        a document written in a
+        markup language such as HTML or XML</p>
+
+    <p>Here's an example of the <strong>inline quote</strong>: <q>Fourscore and seven years ago</q> — is the beginning
+        of Lincoln's
+        Gettysburg Address, which
+        many of us had to memorize in high school.</p>
+    <p><strong>Block quote</strong> example:</p>
+    <blockquote>I need to do my homework.</blockquote>
+
+    <h3>You can find us</h3>
+    <address>Soborna St, 16 ... Rivne, Ukraine</address>
+
+    <hr>
+    <p>
+        <strong>Tag mark:</strong> This is a <mark>highlited</mark> text!<br>
+        <strong>Tag dfn:</strong> <dfn>Programming language</dfn> - system of notation for writing computer
+        programs.<br>
+        <strong>Tag sub:</strong> Formula of water: H<sub>2</sub>O<br>
+        <strong class="important">Tag sup:</strong> Pythagorean theorem: C<sup>2</sup> = A<sup>2</sup> + B<sup>2</sup>
+        <strong>Tag var:</strong> description: <var>C</var> - hypotenuse being<br>
+        <strong>Tag samp:</strong> Try to find a solution: <samp>2 + 2 * 2</samp><br>
+        <strong>Tag kbd:</strong> Open command pallete shortcut: <kbd>Ctrl + Shift + P</kbd><br>
+        <strong class="important"> Tag code:</strong> for loop <code>for (int i = 0; i &lt; 10; ++i) { ... }</code>
+    </p>
+
+    <h3>Preformatted Text</h3>
+    <pre>
+        Line 1
+            Line 2
+                ...
+    </pre>
+
+    <div>
+        <img width="300" src="https://letdiv.com/wp-content/uploads/2021/06/html-css-course.jpg" alt="HTML CSS">
+    </div>
+</body>
+
+</html>
