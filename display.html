@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Prop</title>
+    <style>
+        /* CSS Priorities:
+            ! tag selector
+            !! class selector
+            !!! id selector
+            !!!! style attribute
+        */
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            background-color: lightgray;
+            padding: 16px;
+        }
+
+        span {
+            background-color: darkgray;
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+        }
+
+        /* tag .class selector { } */
+        p.inline-block-items span {
+            /* display - allow us to change the type of the element */
+            /* inline-block: inline positioning & block properties */
+            display: inline-block;
+        }
+
+        .styled {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        /* ------- ID Selectors ------- */
+        #main-title {
+            text-align: center;
+            background-color: rgb(225, 93, 57);
+            color: white;
+            padding: 4px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main-title">Inline and Block Elements</h1>
+
+    <h3>Inline Elements</h3>
+    <p>
+        <strong>Inline elements:</strong>
+        <span>Hi</span>
+        <span class="styled">Hey</span>
+        <span>Hello</span>
+    </p>
+    <p class="inline-block-items">
+        <strong>Inline-block elements:</strong>
+        <span>Hi</span>
+        <span class="styled">Hey</span>
+        <span>Hello</span>
+    </p>
+
+    <div>
+        <img width="150"
+            src="https://media.gcflearnfree.org/content/5e82363212da9215e057b928_03_30_2020/block_vs_inline_diagram.png">
+        <img width="150"
+            src="https://media.gcflearnfree.org/content/5e82363212da9215e057b928_03_30_2020/block_vs_inline_diagram.png">
+    </div>
+
+    <h3>Block Elements</h3>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <address>Rivne, Ukraine</address>
+    <blockquote>To be or not to be!</blockquote>
+
+    <div>
+        <img width="200"
+            src="https://media.gcflearnfree.org/content/5e82363212da9215e057b928_03_30_2020/block_vs_inline_diagram.png">
+    </div>
+    <div>
+        <img width="200"
+            src="https://media.gcflearnfree.org/content/5e82363212da9215e057b928_03_30_2020/block_vs_inline_diagram.png">
+    </div>
+</body>
+
+</html>
