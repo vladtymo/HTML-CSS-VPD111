@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* ------------- unordered list styling */
+        ul.custom-style {
+            list-style-type: circle;
+            list-style-position: outside;
+        }
+
+        /* pseudo class ::marker - styles marler only */
+        li.important::marker {
+            color: red;
+        }
+
+        ul.reset-style {
+            list-style-type: none;
+            /* padding-left: 0; */
+        }
+
+        ul.image-marker {
+            list-style-image: url(./images/ukraine.png);
+        }
+
+        /* ------------- ordered list styling */
+        ol.custom-style {
+            list-style-type: lower-alpha;
+        }
+
+        ol.custom-marker-content {
+            list-style-type: none;
+
+            /* create counter */
+            counter-reset: number;
+        }
+
+        /* pseudo-elements ::before ::after - add content before/after element */
+        ol.custom-marker-content>li::before {
+            content: '#' counter(number) ' - ';
+            font-weight: bold;
+            /* increment counter */
+            counter-increment: number;
+        }
+
+        h2::before,
+        h2::after {
+            content: '*';
+            color: red;
+        }
+
+        /* ------------- description list styling */
+        dt {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        dd {
+            background-color: rgb(60, 60, 210);
+            color: white;
+            margin-left: 0;
+            padding: 10px;
+            margin-bottom: 2px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* ------------- multilevel list styling */
+        /* leve 1> */
+        ol.multilevel {
+            color: blueviolet;
+        }
+
+        /* level 2> */
+        ol.multilevel>li>ol {
+            color: green;
+        }
+
+        /* level 3> */
+        ol.multilevel ol ul {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Working with Lists</h1>
+
+    <h2>Unordered List</h2>
+    <!-- emmet: ul>li*5>lorem7 -->
+    <ul class="custom-style">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        <li>Dicta ipsam quas dolorem natus. Molestias, enim.</li>
+        <li class="important">Velit dolorem sunt possimus nobis beatae laborum?</li>
+        <li>Ipsam ipsa, sapiente et nostrum rem ab! Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, dolor.
+        </li>
+        <li>Voluptatibus harum assumenda, impedit quam fuga reiciendis!</li>
+    </ul>
+
+    <h3>Reseted Style</h3>
+    <ul class="reset-style">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Eum aspernatur nulla possimus officiis!</li>
+        <li>Magni similique est neque nostrum?</li>
+    </ul>
+
+    <h3>Image Marker Style</h3>
+    <ul class="image-marker">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Eum aspernatur nulla possimus officiis!</li>
+        <li>Magni similique est neque nostrum?</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol class="custom-style">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        <li>Amet quaerat perferendis sequi in unde dolor.</li>
+        <li>Iure dolores, fuga expedita eligendi facilis quidem?</li>
+        <li>Voluptatum quasi, ut in nam praesentium nobis?</li>
+        <li>Minima earum debitis iure fuga in error.</li>
+    </ol>
+
+    <h3>Using attributes</h3>
+    <ol start="6" reversed>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Voluptas dolor possimus optio iste!</li>
+        <li value="10">Officia error dolorum cumque assumenda!</li>
+        <li>Voluptas dolor possimus optio iste!</li>
+        <li>Officia error dolorum cumque assumenda!</li>
+    </ol>
+
+    <h3>Custom Marker Content</h3>
+    <ol class="custom-marker-content">
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+        <li>Obcaecati neque vero distinctio laudantium ipsam sed.</li>
+        <li>Quaerat fugit libero optio, ipsa porro ratione.</li>
+        <li>Impedit eaque id excepturi aut, illum magni.</li>
+        <li>Labore nesciunt rem aspernatur sapiente sint explicabo!</li>
+    </ol>
+
+    <h2>Description List</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed
+            in a web browser.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written
+            in a markup language such as HTML or XML.</dd>
+        <dt>JS</dt>
+        <dd>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the
+            World Wide Web, alongside HTML and CSS. </dd>
+    </dl>
+
+    <h2>Multilevel List</h2>
+    <ol class="multilevel">
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+        <li>Eos aut animi necessitatibus, molestiae enim voluptates!
+            <ol>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Vero numquam ea maxime.</li>
+                <li>In numquam odit quos!
+                    <ul>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Itaque, alias laudantium.</li>
+                        <li>Eius, atque aperiam?</li>
+                        <li>Officia, maxime vel!</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li>Laborum hic explicabo aliquid. Numquam, fugit corrupti.</li>
+        <li>Ipsam eum ut repudiandae. Fuga, necessitatibus expedita.</li>
+        <li>Blanditiis repellendus iusto facere et id neque!
+            <ol>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Vero numquam ea maxime.
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Eius, ipsa quod. Ullam dolorum quasi perspiciatis labore.</li>
+                    </ul>
+                </li>
+                <li>In numquam odit quos!</li>
+            </ol>
+        </li>
+        <li>Commodi accusamus libero excepturi! Ipsa, dolores totam!</li>
+        <li>Beatae, deleniti animi quaerat tenetur sunt reiciendis.</li>
+    </ol>
+</body>
+
+</html>
