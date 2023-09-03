@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            background-color: lightblue;
+            padding: 15px;
+            border-radius: 6px;
+            width: 60%;
+            margin: 10px auto;
+            box-shadow: 4px 4px 10px gray;
+        }
+
+        .stretch-last {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .stretch-last :last-child {
+            flex-grow: 1;
+        }
+
+        /* input styling */
+        input.styled {
+            background-color: lightcyan;
+            color: black;
+            padding: 10px;
+            border: none;
+            outline: none;
+            transition: .1s;
+        }
+        input.styled:focus {
+            box-shadow: inset 1px 1px 4px gray;
+        }
+
+        button.styled {
+            background-color: darkblue;
+            color: white;
+            border: none;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Pizza Order Form</h2>
+
+        <div class="stretch-last">
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+        </div>
+        <div class="stretch-last">
+            <label>Email Address:</label>
+            <input type="email" placeholder="Enter address">
+        </div>
+
+        <label>Price:</label>
+        <input type="number" min="50" max="1000" step="25">
+
+        <label accesskey="k">
+            <span>Check me</span>
+            <input type="checkbox" name="" id="">
+        </label>
+
+        <input type="color" name="" id="">
+        <input type="date" name="" id="">
+        <input type="time" name="" id="">
+        <input type="file" name="" id="">
+        <input type="password" name="" id="">
+        <div>
+            <label>
+                <span>Ecomon</span>
+                <input type="radio" name="orderType" id="">
+            </label>
+            <label>
+                <span>Standart</span>
+                <input type="radio" name="orderType" id="">
+            </label>
+            <label>
+                <span>Premium</span>
+                <input type="radio" name="orderType" id="">
+            </label>
+        </div>
+
+        <input type="range" name="" id="">
+        <input class="styled" type="url" name="" id="">
+
+        <button type="reset">Reset</button>
+        <button class="styled" type="submit">Submit</button>
+    </form>
+
+    <script>
+        const submitBtn = document.querySelector('button[type=submit]');
+
+        submitBtn.onclick = (event) => {
+            event.preventDefault();
+
+            alert("Clicked");
+        }
+    </script>
+</body>
+</html>
